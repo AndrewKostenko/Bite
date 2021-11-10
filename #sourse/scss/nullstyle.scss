@@ -1,0 +1,138 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: $font-size;
+	font-weight: 400;
+	font-family: $font-family;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+// ===============================================================================================================
+
+.wrapper {
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	max-width: 100vw;
+}
+body {
+	color: $black;
+}
+.container {
+	width: 100%;
+	max-width: $container-width + $container-padding * 2;
+	padding: 0 $container-padding;
+	margin: 0 auto;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	line-height: 31 / 18 * 100%;
+	text-align: center;
+	color: $blue41;
+	background-color: white;
+	cursor: pointer;
+	padding: 11px 32px;
+	border: 3px solid $blue41;
+	border-radius: 50px;
+	transition: 300ms;
+	white-space: nowrap;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $blue41;
+			color: white;
+		}
+	}
+	&-reverse {
+		background-color: $blue41;
+		color: white;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blue41;
+				background-color: white;
+			}
+		}
+	}
+	&-blue {
+		border-radius: 6.25px;
+		padding: 12px 24px;
+		font-size: 23px;
+		border: 3px solid $blue41;
+		background-color: $blue41;
+		color: white;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blue41;
+				background-color: white;
+			}
+		}
+	}
+}
